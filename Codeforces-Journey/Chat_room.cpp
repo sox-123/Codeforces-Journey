@@ -1,46 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main() {
     string s;
     cin >> s;
-    bool statement = true;
-    for (int i = 0; i < s.size(); i++)
-    {
-        if (s[i] == 'h')
-        {
-            for (int j = i + 1; j < s.size(); j++)
-            {
-                if (s[j] == 'e')
-                {
-                    for (int k = j + 1; k < s.size(); k++)
-                    {
-                        if (s[k] == 'l')
-                        {
-                            for (int l = k + 1; l < s.size(); l++)
-                            {
-                                if (s[l] == 'l')
-                                {
-                                    for (int m = l + 1; m < s.size(); m++)
-                                    {
-                                        if (s[m] == 'o')
-                                        {
-                                            statement == true;
-                                            cout<<"YES";
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+
+    string hello = "hello";
+    int j = 0;
+
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] == hello[j]) {
+            j++;
+        }
+        if (j == 5) {
+            cout << "YES";
+            return 0;
         }
     }
-    if(!statement){
-        cout<<"NO";
-    }
+
+    cout << "NO";
     return 0;
 }
